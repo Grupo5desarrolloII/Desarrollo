@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TablaUsuariowebsilaboModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tusuario">
+          <Key>
+            <PropertyRef Name="idUsuario" />
+          </Key>
+          <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoUsuario" Type="varchar" MaxLength="45" />
+          <Property Name="Nombres" Type="varchar" MaxLength="45" />
+          <Property Name="Apellidos" Type="varchar" MaxLength="45" />
+          <Property Name="Correo" Type="varchar" MaxLength="45" />
+          <Property Name="Contrasena" Type="varchar" MaxLength="45" />
+          <Property Name="ComiteRevision" Type="bit" />
+          <Property Name="Activo" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="TablaUsuariowebsilaboModelStoreContainer">
+          <EntitySet Name="tusuario" EntityType="Self.tusuario" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TablaUsuariowebsilaboModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tusuario">
+          <Key>
+            <PropertyRef Name="idUsuario" />
+          </Key>
+          <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoUsuario" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Nombres" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Apellidos" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Contrasena" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="ComiteRevision" Type="Boolean" />
+          <Property Name="Activo" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="TablaUsuarioswebsilaboEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tusuario" EntityType="Self.tusuario" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TablaUsuariowebsilaboModelStoreContainer" CdmEntityContainer="TablaUsuarioswebsilaboEntities">
+          <EntitySetMapping Name="tusuario">
+            <EntityTypeMapping TypeName="TablaUsuariowebsilaboModel.tusuario">
+              <MappingFragment StoreEntitySet="tusuario">
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="TipoUsuario" ColumnName="TipoUsuario" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="ComiteRevision" ColumnName="ComiteRevision" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

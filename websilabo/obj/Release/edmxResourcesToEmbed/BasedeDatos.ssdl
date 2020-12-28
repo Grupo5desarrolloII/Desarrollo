@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TablaUsuariowebsilaboModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tusuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoUsuario" Type="varchar" MaxLength="45" />
+    <Property Name="Nombres" Type="varchar" MaxLength="45" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="45" />
+    <Property Name="Correo" Type="varchar" MaxLength="45" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="45" />
+    <Property Name="ComiteRevision" Type="bit" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="TablaUsuariowebsilaboModelStoreContainer">
+    <EntitySet Name="tusuario" EntityType="Self.tusuario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

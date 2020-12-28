@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="websilaboModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="solicitud">
+    <Key>
+      <PropertyRef Name="idSolicitud" />
+    </Key>
+    <Property Name="idSolicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="asunto" Type="varchar" MaxLength="50" />
+    <Property Name="estado" Type="varchar" MaxLength="50" />
+    <Property Name="codigoRemitente" Type="varchar" MaxLength="20" />
+    <Property Name="nombreDoc" Type="varchar" MaxLength="50" />
+    <Property Name="documento" Type="varchar" MaxLength="200" />
+    <Property Name="FechaRegistro" Type="varchar" MaxLength="20" />
+    <Property Name="TipoSolicitud" Type="varchar" MaxLength="25" />
+    <Property Name="AreaDestino" Type="varchar" MaxLength="25" />
+    <Property Name="idUsuario" Type="int" />
+  </EntityType>
+  <EntityType Name="tusuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoUsuario" Type="varchar" MaxLength="45" />
+    <Property Name="Nombres" Type="varchar" MaxLength="45" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="45" />
+    <Property Name="Correo" Type="varchar" MaxLength="45" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="45" />
+    <Property Name="ComiteRevision" Type="bit" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <Association Name="FK__solicitud__idUsu__398D8EEE">
+    <End Role="tusuario" Type="Self.tusuario" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="solicitud" Type="Self.solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tusuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="solicitud">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="websilaboModelStoreContainer">
+    <EntitySet Name="solicitud" EntityType="Self.solicitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tusuario" EntityType="Self.tusuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__solicitud__idUsu__398D8EEE" Association="Self.FK__solicitud__idUsu__398D8EEE">
+      <End Role="tusuario" EntitySet="tusuario" />
+      <End Role="solicitud" EntitySet="solicitud" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="websilabo" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=websilabo;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="websilaboConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.solicitud" Member="solicituds">
+    <Type Name="solicitud">
+      <Column Name="idSolicitud" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="asunto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="codigoRemitente" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nombreDoc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="documento" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FechaRegistro" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TipoSolicitud" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="AreaDestino" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

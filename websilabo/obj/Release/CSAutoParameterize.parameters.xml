@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="TablaUsuarioswebsilaboEntities-Web.config Connection String" description="TablaUsuarioswebsilaboEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/BasedeDatos.csdl|res://*/BasedeDatos.ssdl|res://*/BasedeDatos.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.;initial catalog=websilabo;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\quikj\\source\\repos\\websilabo\\websilabo\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TablaUsuarioswebsilaboEntities']/@connectionString" />
+  </parameter>
+  <parameter name="websilaboConnectionString-Web.config Connection String" description="websilaboConnectionString Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=.;Initial Catalog=websilabo;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\quikj\\source\\repos\\websilabo\\websilabo\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='websilaboConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="websilabo_dbConnectionString-Web.config Connection String" description="websilabo_dbConnectionString Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=websilabodbserver.database.windows.net;Initial Catalog=websilabo_db;Persist Security Info=True;User ID=lucho;Password=Pastore123-" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\quikj\\source\\repos\\websilabo\\websilabo\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='websilabo_dbConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

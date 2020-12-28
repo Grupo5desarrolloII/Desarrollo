@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="websilaboModelStoreContainer" CdmEntityContainer="websilaboEntities1">
+    <EntitySetMapping Name="solicitud">
+      <EntityTypeMapping TypeName="websilaboModel.solicitud">
+        <MappingFragment StoreEntitySet="solicitud">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="asunto" ColumnName="asunto" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="codigoRemitente" ColumnName="codigoRemitente" />
+          <ScalarProperty Name="nombreDoc" ColumnName="nombreDoc" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="TipoSolicitud" ColumnName="TipoSolicitud" />
+          <ScalarProperty Name="AreaDestino" ColumnName="AreaDestino" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tusuario">
+      <EntityTypeMapping TypeName="websilaboModel.tusuario">
+        <MappingFragment StoreEntitySet="tusuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="TipoUsuario" ColumnName="TipoUsuario" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="ComiteRevision" ColumnName="ComiteRevision" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
